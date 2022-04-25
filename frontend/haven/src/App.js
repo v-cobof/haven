@@ -1,6 +1,4 @@
 import './css/App.css';
-import havenLogo from './havenLogo.png'
-// usar a imagem <img src={havenLogo} className="App-logo" alt="logo" />
 
 import React from 'react';
 import {
