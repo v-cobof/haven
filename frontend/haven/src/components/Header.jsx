@@ -1,6 +1,4 @@
-import havenLogo from '../havenLogo.png'
-import {} from '../css/Header.css'
-// usar a imagem 
+import havenLogo from '../havenLogo.png';
 
 const Header = () => {
   return (

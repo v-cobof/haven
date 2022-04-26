@@ -12,12 +12,15 @@ import {
 import { formatRelative } from "date-fns"
 
 import "@reach/combobox/styles.css";
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "100vw",
+  width: "80vw",
   height: "100vh",
 };
+
 const center = {
   lat: 43.653225,
   lng: -79.383186,
@@ -35,11 +38,17 @@ export default function App() {
 
 
   return (
-    <GoogleMap 
-      mapContainerStyle={mapContainerStyle} 
-      zoom={8}
-      center={center}
-    >
-    </GoogleMap>
+    <>
+      <Header/>
+      <body>
+        {/*<GoogleMap 
+          mapContainerStyle={mapContainerStyle} 
+          zoom={8}
+          center={center}
+        >
+        </GoogleMap>*/}
+      </body>
+      <Footer/>
+    </>
   );
 }
