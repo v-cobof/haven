@@ -2,10 +2,10 @@ import havenLogo from '../havenLogo.png';
 
 const Header = () => {
   return (
-    <div className='header'>
+    <header>
       <img src={havenLogo} className="App-logo" alt="logo" />
       <span>Sobre nós</span>
-    </div>
+    </header>
   );
 }
 
