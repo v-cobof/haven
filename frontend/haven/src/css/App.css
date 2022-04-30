@@ -103,8 +103,43 @@ button {
   padding: 0.5rem;
   border-radius: 5px;
   font-size: large;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #100475;
+  transition: all 0.15s;
 }
 
 #home-button {
   margin-top: 2rem;
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+form {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem 0;
+  border: 1.5px solid #050038;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.login-container form button {
+  margin-top: 1rem;
 }
