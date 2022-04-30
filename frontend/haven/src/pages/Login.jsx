@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import PresentationContent from '../components/PresentationContent';
 import { Link } from 'react-router-dom';
 
-export default function App() {
+export default function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,22 +18,22 @@ export default function App() {
   }
 
   return (
-    <div className='login-container'>
+    <div className='form-container'>
       <PresentationContent />
       <form onSubmit={handleSubmit}>
         <input 
-            placeholder='Email'
-            type="email"
-            required 
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+          placeholder='Email'
+          type="email"
+          required 
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input 
-            placeholder='Senha'
-            type="password"
-            required 
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+          placeholder='Senha'
+          type="password"
+          required 
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button>Fazer Login</button>
       </form>

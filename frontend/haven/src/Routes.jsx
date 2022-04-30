@@ -2,6 +2,7 @@ import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Options from "./pages/Options";
 import Login from "./pages/Login";
+import RegisterUser from "./pages/RegisterUser";
 
 
 const Routes = () => {
@@ -11,6 +12,7 @@ const Routes = () => {
         <Route path="/" element={<Home />}/>
         <Route path="/options" element={<Options />}/>
         <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<RegisterUser />}/>
       </Switch>
     </BrowserRouter>
   );
