@@ -51,8 +51,8 @@ body {
 
 body h1 {
   color: #050038;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
 }
 
@@ -127,14 +127,14 @@ form {
   width: 20rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
   margin-top: 2rem;
 }
 
-input {
+input, textarea {
   width: 100%;
   padding: 0.5rem 0.8rem;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
   border: 1.5px solid #050038;
   box-sizing: border-box;
   border-radius: 8px;
@@ -142,4 +142,51 @@ input {
 
 .form-container form button {
   margin-top: 1rem;
+}
+
+.form-report {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 50rem;
+  
+}
+
+.report-h1 {
+  padding-left: 2rem;
+}
+
+.search-container {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.form-report-container {
+  padding-left: 1rem;
+  display: flex;
+}
+
+.radios {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.other {
+  height: fit-content;
+}
+
+.form-report  textarea{
+  min-height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.form-report button {
+  width: fit-content;
+}
+
+.field-not-active {
+  pointer-events: none;
+
+  background-color: #eee;
 }

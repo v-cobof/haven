@@ -7,6 +7,11 @@ export default function RegisterUser() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPass, setConfirmPass] = useState('');
+    const [name, setName] = useState('');
+    const [cpf, setCpf] = useState('');
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +20,6 @@ export default function RegisterUser() {
         console.log(user)
     }
 
-    const [phone, setPhone] = useState("");
     return (
         <div className="form-container">
             <PresentationContent />
@@ -27,14 +31,14 @@ export default function RegisterUser() {
                     type="text"
                     required 
                     req
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                 />
                 <InputMask
                     placeholder='CPF'
                     type='text'
-                    value={phone}
-                    onChange={e => setPhone(e.target.value)}
+                    value={cpf}
+                    onChange={e => setCpf(e.target.value)}
                     mask="999.999.999-99"
                     maskChar="_"
                 />
@@ -56,8 +60,8 @@ export default function RegisterUser() {
                     placeholder='Confirme sua senha'
                     type="password"
                     required 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={confirmPass}
+                    onChange={(e) => setConfirmPass(e.target.value)}
                 />
                 <button>Fazer Login</button>
             </form>
