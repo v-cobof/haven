@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import PresentationContent from '../components/PresentationContent';
-import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 export default function Login() {
 
@@ -18,6 +17,7 @@ export default function Login() {
   }
 
   return (
+    <>
     <div className='form-container'>
       <PresentationContent />
       <form onSubmit={handleSubmit}>
@@ -38,5 +38,7 @@ export default function Login() {
         <button>Fazer Login</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 }

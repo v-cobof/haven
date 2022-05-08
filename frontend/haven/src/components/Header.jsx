@@ -1,4 +1,4 @@
-import havenLogo from '../havenLogo.png';
+import havenLogo from '../assets/havenLogo.png';
 
 const Header = () => {
   return (

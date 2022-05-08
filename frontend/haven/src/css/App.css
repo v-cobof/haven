@@ -26,12 +26,17 @@ header span {
   color: #050038;
 }
 
-footer {
+.footer {
   background-color: #050038;
   padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.footer-alt {
+  background-color: #050038;
+  padding: 1rem;
 }
 
 footer p a {
@@ -46,7 +51,7 @@ footer a {
 
 body {
   background-color: #DDF4F7;
-  width: 100vw;
+  /*width: 100vw;*/
 }
 
 body h1 {
@@ -54,6 +59,10 @@ body h1 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
+}
+
+h2, h3, h4, p {
+  color: #050038
 }
 
 .home-container h1 {
@@ -152,7 +161,7 @@ input, textarea {
 }
 
 .report-h1 {
-  padding-left: 2rem;
+  padding-left: 4rem;
 }
 
 .search-container {
@@ -161,9 +170,14 @@ input, textarea {
   margin-bottom: 2rem;
 }
 
+.search-container.map-page {
+  margin-left: 3rem;
+}
+
 .form-report-container {
-  padding-left: 1rem;
+  padding-left: 3rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .radios {
@@ -189,4 +203,94 @@ input, textarea {
   pointer-events: none;
 
   background-color: #eee;
+}
+
+.info-panel {
+  width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-page-wrapper{
+  display: flex;
+  margin-left: 4rem;
+}
+
+.map-container {
+  width: 55vw;
+  height: 50vh;
+}
+
+.map-super-container {
+  display: flex;
+}
+
+.map-reports-container {
+  margin-left: 4rem;
+  margin-right: 33.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.map-reports-container h2 {
+  margin-bottom: 1rem;
+}
+
+.report-card {
+  border: #050038 1px dotted;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.report-card p {
+  color: #050038;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 1rem;
+}
+
+.map-data-container{
+  width: 100%;
+  margin-left: 1rem;
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-data-container h2 {
+  margin-bottom: 2rem;
+}
+
+.map-data-container ul{
+  list-style: none;
+}
+
+.circles-list {
+  margin-top: 12rem;
+}
+
+.circle-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.circle-item img {
+  width: 2rem;
+}
+
+.combobox-input {
+  width: 38.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0.3rem 0;
+  border: 1.5px solid #050038;
+  box-sizing: border-box;
+  border-radius: 8px;
 }

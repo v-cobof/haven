@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import PresentationContent from '../components/PresentationContent';
 import InputMask from 'react-input-mask';
+import Footer from '../components/Footer';
 
 export default function RegisterUser() {
 
@@ -21,6 +22,7 @@ export default function RegisterUser() {
     }
 
     return (
+        <>
         <div className="form-container">
             <PresentationContent />
 
@@ -66,6 +68,8 @@ export default function RegisterUser() {
                 <button>Fazer Login</button>
             </form>
         </div>
+        <Footer />
+        </>
     );
 
 }

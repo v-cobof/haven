@@ -7312,7 +7312,7 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react@^16.6.3 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^18.0.0", "react@>= 16", "react@>=0.14.0", "react@>=16.8":
+"react@^16.6.3 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^18.0.0", "react@>= 16", "react@>= 16.8.0", "react@>=0.14.0", "react@>=16.8":
   "integrity" "sha512-x+VL6wbT4JRVPm7EGxXhZ8w8LTROaxPXOqhlGyVSrv0sB1jkyFGgXxJ8LVoPRLvPR6/CIZGFmfzqUa2NYeMr2A=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.0.0.tgz"
   "version" "18.0.0"
@@ -8465,6 +8465,11 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"use-places-autocomplete@^3.0.0":
+  "integrity" "sha512-goow+G/crCRQ1WMVw6RMiBfH/7VQF38dF6ccS4YBzr49qEuYNN9PzaBEdUGvi5S4CMnXIqfT+zDLsy/u9kqy4Q=="
+  "resolved" "https://registry.npmjs.org/use-places-autocomplete/-/use-places-autocomplete-3.0.0.tgz"
+  "version" "3.0.0"
 
 "util-deprecate@^1.0.1", "util-deprecate@^1.0.2", "util-deprecate@~1.0.1":
   "integrity" "sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8="

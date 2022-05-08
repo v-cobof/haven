@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 export default function Options() {
 
   return (
+    <>
     <div className='options-container'>
       <PresentationContent />
       <div className='options-button-container'>
@@ -15,5 +16,7 @@ export default function Options() {
         <button>Contribuir com uma denúncia</button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }

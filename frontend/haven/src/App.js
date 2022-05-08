@@ -5,14 +5,17 @@ import Footer from './components/Footer';
 
 import Routes from "./Routes";
 
+
+
 function App() {
+
   return (
     <>
       <Header/>
         <body>
-          <Routes />
+          <Routes/>
         </body>
-      <Footer/>
+
     </>
   );
 }

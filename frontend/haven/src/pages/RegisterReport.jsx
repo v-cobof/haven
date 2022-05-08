@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import PresentationContent from '../components/PresentationContent';
 import InputMask from 'react-input-mask';
+import Footer from '../components/Footer';
 
 export default function RegisterUser() {
 
@@ -62,7 +63,17 @@ export default function RegisterUser() {
                     <textarea placeholder='Descrição do crime'></textarea>
                     <button>Registrar denúncia</button>
                 </form>
+
+                <div className='info-panel'>
+                    <p>
+                        <strong>ATENÇÃO </strong><br />
+                        Este relato NÃO substitui um Boletim de Ocorrência e serve apenas para contribuir 
+                        com nossas bases de dados e enriquecer nossas informações para os usuários. Para registrar 
+                        um Boletim de Ocorrência oficial <a href='https://www.delegaciaeletronica.policiacivil.sp.gov.br/ssp-de-cidadao/pages/comunicar-ocorrencia'>CLIQUE AQUI</a>
+                    </p>
+                </div>
             </div>
+            <Footer />
         </>
     );
 
