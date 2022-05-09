@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
+import { useLoadScript } from "@react-google-maps/api"
 import PresentationContent from '../components/PresentationContent';
 import InputMask from 'react-input-mask';
 import Footer from '../components/Footer';
+import Places from "../components/Places";
 
 export default function RegisterUser() {
 
@@ -10,10 +11,19 @@ export default function RegisterUser() {
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
     const [name, setName] = useState('');
+    const [location, setLocation] = useState('');
 
     const [crime, setCrime] = useState('');
     const [otherCrime, setOtherCrime] = useState(false);
     const [otherCrimeContent, setOtherCrimeContent] = useState('');
+
+    const { isLoaded, loadError } = useLoadScript({
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        libraries: ["places"],
+      });
+    
+      if (loadError) return "Error loading maps";
+      if (!isLoaded) return "loading Maps";
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -33,17 +43,23 @@ export default function RegisterUser() {
         <>
             <h1 className='report-h1'>Haven</h1>
             <div className="form-report-container">
-
+                        
                 <form onSubmit={handleSubmit} className='form-report'>
                     <div className='search-container'>
-                        <input 
+                    <Places 
+                        setLocation={(position) => {
+                        setLocation(position);
+                        }}
+                    />
+                        {/*<input 
                             placeholder='Endereço'
                             type="text"
                             required 
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
-                        <button>Buscar</button>
+                        <button>Buscar</button>*/}
+                        
                     </div>
                     <div className='radios'>
                         <div><input type="radio" value="Furto" name="tipoCrime" onChange={(e) => handleCrime(e.target.value)}/> <label>Furto</label></div>

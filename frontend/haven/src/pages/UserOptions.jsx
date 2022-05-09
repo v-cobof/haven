@@ -12,8 +12,8 @@ export default function Options() {
     <div className='options-container'>
       <PresentationContent />
       <div className='options-button-container'>
-        <button>Realizar uma Consulta</button>
-        <button>Contribuir com uma denúncia</button>
+        <Link to="/map" className="button">Realizar uma Consulta</Link>
+        <Link to="/report" className="button">Contribuir com uma denúncia</Link>
       </div>
     </div>
     <Footer />

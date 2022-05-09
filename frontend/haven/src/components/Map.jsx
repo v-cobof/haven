@@ -7,28 +7,20 @@ import {
     MarkerClusterer,
 } from "@react-google-maps/api";
 import Places from "./Places";
-import { ReactDOM } from "react";
 
-//import Distance from "./distance"
-
-/*
-type LatLngLiteral = google.maps.LatLngLiteral;
-type DirectionsResult = google.maps.DirectionsResult;
-type MapOptions = google.maps.MapOptions;
-*/
 
 export default function Map() {
-    //const center = useMemo(() => ({lat: 43, lng: -80}), []);
+
     const [zoom, setZoom] = useState(9)
     const mapRef = useRef();
     const [center, setCenter] = useState({lat: -23.36, lng: -46.84})
-    //const [location, setLocation] = useState();
-    const [directions, setDirections] = useState();
+
+
     const [circ, setCirc] = useState(false);
 
 
     function setLocation(local) {
-      //ReactDOM.unmountComponentAtNode(document.getElementById("id"))
+
       setCirc(true);
       setCenter(local);
       setZoom(16);   
@@ -40,10 +32,6 @@ export default function Map() {
       }),
       []
     );
-
-    /*const options = {
-      disableDefaultUI: true,
-    }*/
 
     const onLoad = useCallback((map) => (mapRef.current = map), []);
 
@@ -99,20 +87,3 @@ function colorOptions(){
     fillColor: color,
   }
 };
-
-
-/*const middleSafeOptions = {
-  ...defaultOptions,
-  zIndex: 2,
-  fillOpacity: 0.05,
-  strokeColor: ,
-  fillColor: "#EBDE83",
-};
-
-const unsafeOptions = {
-  ...defaultOptions,
-  zIndex: 1,
-  fillOpacity: 0.05,
-  strokeColor: "",
-  fillColor: "#E79E8E",
-};*/

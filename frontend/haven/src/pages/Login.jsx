@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import PresentationContent from '../components/PresentationContent';
 import Footer from '../components/Footer';
-
+import { Link } from 'react-router-dom';
 export default function Login() {
 
   const [email, setEmail] = useState('');
@@ -35,7 +35,8 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button>Fazer Login</button>
+        {/*<button>Fazer Login</button>*/}
+        <Link to="/user" className="button">Fazer login</Link>
       </form>
     </div>
     <Footer/>

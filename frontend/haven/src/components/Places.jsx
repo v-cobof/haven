@@ -11,7 +11,7 @@ import {
 } from "@reach/combobox";
 import "@reach/combobox/styles.css"
 
-export default function Places({setLocation}) {
+export default function Places(prop) {
     const { 
         ready, 
         value, 
@@ -27,7 +27,7 @@ export default function Places({setLocation}) {
         const results = await getGeocode({address: val});
         console.log(results)
         const {lat, lng} = await getLatLng(results[0]);
-        setLocation({lat, lng});
+        prop.setLocation({lat, lng});
     }
 
     return <Combobox onSelect={handleSelect}>

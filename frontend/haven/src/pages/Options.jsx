@@ -12,9 +12,9 @@ export default function Options() {
     <div className='options-container'>
       <PresentationContent />
       <div className='options-button-container'>
-        <button>Fazer Login</button>
-        <button>Criar uma Conta</button>
-        <button>Realizar uma Consulta</button>
+        <Link to="/login" className="button">Fazer Login</Link>
+        <Link to="/register" className="button">Criar uma Conta</Link>
+        <Link to="/map" className="button">Realizar uma Consulta</Link>
       </div>
     </div>
     <Footer />
