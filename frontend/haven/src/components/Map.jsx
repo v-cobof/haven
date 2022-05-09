@@ -9,7 +9,7 @@ import {
 import Places from "./Places";
 
 
-export default function Map() {
+export default function Map(prop) {
 
     const [zoom, setZoom] = useState(9)
     const mapRef = useRef();
@@ -23,7 +23,9 @@ export default function Map() {
 
       setCirc(true);
       setCenter(local);
-      setZoom(16);   
+      console.log(local)
+      setZoom(16);
+      //setCep()   
     }
 
     const options = useMemo(
@@ -40,12 +42,12 @@ export default function Map() {
 
           <form className='form-report'>
             <div className='search-container map-page'>
-              <Places 
+              <Places
+                setCep={prop.setCep} 
                 setLocation={(position) => {
                   setLocation(position);
                 }}
               />
-              <button>Buscar</button>
             </div>
           </form>
           <div className="map-page-wrapper">
@@ -55,24 +57,23 @@ export default function Map() {
                 mapContainerClassName="map-container"
                 options={options}
               >
-                {circ && (<Circle id="circ" center={center} radius={500} options={colorOptions()}/>)}
+                {circ && (<Circle id="circ" center={center} radius={500} options={colorOptions(prop.nivel)}/>)}
               </GoogleMap>
           </div>
         </>
     )
 }
 
-function colorOptions(){
-  let safety = 0;
-  let color;
-  if(safety === 0){
+function colorOptions(safety){
+  let color = "#fff"
+  if(safety === "Baixo"){
     color = "#B6E3A3"
   }
-  else if (safety === 1) {
+  else if (safety === "Medio") {
     color = "#EBDE83"
   }
-  else if (safety === 2) {
-    color = "#E79E8E"
+  else if (safety === "Alto") {
+    color = "#EC735A"
   }
 
   return {

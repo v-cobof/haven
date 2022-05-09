@@ -1,12 +1,12 @@
-const ReportCard = () => {
+const ReportCard = (prop) => {
 
     return (
         <div className="report-card">
             <div className="card-header">
-                <h3>Maria</h3>
-                <h4>21/05/2021</h4>
+                <h3>{prop.name}</h3>
+                <h4>{prop.date}</h4>
             </div>
-            <p>jvssfvvbujubnjbwehrthibnutbu9bu9ttbu93qhub9hhb3qun</p>
+            <p>{prop.description}</p>
         </div>  
     );
   }

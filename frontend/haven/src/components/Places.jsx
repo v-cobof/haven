@@ -1,6 +1,7 @@
 import usePlacesAutocomplete, {
     getGeocode,
-    getLatLng
+    getLatLng,
+    getZipCode
 } from "use-places-autocomplete";
 import {
     Combobox,
@@ -10,6 +11,7 @@ import {
     ComboboxOption
 } from "@reach/combobox";
 import "@reach/combobox/styles.css"
+import { CEP_URL } from "../utils/requests";
 
 export default function Places(prop) {
     const { 
@@ -27,6 +29,23 @@ export default function Places(prop) {
         const results = await getGeocode({address: val});
         console.log(results)
         const {lat, lng} = await getLatLng(results[0]);
+        const zip = await getZipCode(results[0], true)
+
+        /*if(zip === undefined){
+
+            foreach
+                
+                const x = results[0].address_components
+
+            axios.get(`${CEP_URL}/usuarios`)
+                .then(response => {
+                    setUsuarios(response.data);
+                    console.log(response.data);
+            
+                });
+        }*/
+
+        prop.setCep(zip)
         prop.setLocation({lat, lng});
     }
 

@@ -272,10 +272,13 @@ input, textarea {
   border: #050038 1px dotted;
   border-radius: 8px;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .report-card p {
   color: #050038;
+  font-weight: lighter;
+  font-size: medium;
 }
 
 .card-header {
@@ -319,10 +322,18 @@ input, textarea {
 }
 
 .combobox-input {
-  width: 38.5rem;
+  width: 47rem;
   padding: 0.5rem 0.8rem;
   margin: 0.3rem 0;
   border: 1.5px solid #050038;
   box-sizing: border-box;
   border-radius: 8px;
+}
+
+#report-search .combobox-input  {
+  width: 50rem;
+}
+
+.data-list li {
+  font-size: large;
 }

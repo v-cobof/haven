@@ -45,7 +45,7 @@ export default function RegisterUser() {
             <div className="form-report-container">
                         
                 <form onSubmit={handleSubmit} className='form-report'>
-                    <div className='search-container'>
+                    <div className='search-container' id='report-search'>
                     <Places 
                         setLocation={(position) => {
                         setLocation(position);
