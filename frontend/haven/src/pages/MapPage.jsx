@@ -61,14 +61,6 @@ export default function MapPage() {
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "loading Maps";
 
-
-  
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
-
   const assalto = reports.filter(x => x.modalidadeCrime === "Assalto").length
   const furto = reports.filter(x => x.modalidadeCrime === "Furto").length
 
@@ -93,15 +85,15 @@ export default function MapPage() {
         <ul className="circles-list">
 
           <li className="circle-item">
-            <img src={greenCircle}/>
+            <img src={greenCircle} alt=""/>
             <p>Esta região é segura!</p>
           </li>
           <li className="circle-item">
-            <img src={yellowCircle}/>
+            <img src={yellowCircle} alt=""/>
             <p>Esta região não é tão segura, fique atento!</p>
           </li>
           <li className="circle-item">
-            <img src={redCircle}/>
+            <img src={redCircle} alt=""/>
             <p>Esta região não é segura, evite-a se puder</p>
           </li>
         </ul>
@@ -114,7 +106,7 @@ export default function MapPage() {
       {reports.map((item, index) => {
         const dt = new Date(item.dataInclusao);
         const dtDateOnly = new Date(dt.valueOf() + dt.getTimezoneOffset() * 60 * 1000);
-        const user = usuarios.find(t => t.id == item.idUsuario)
+        const user = usuarios.find(t => t.id === item.idUsuario)
         console.log(usuarios)
         
         return (
@@ -129,9 +121,9 @@ export default function MapPage() {
 
     </div>
     <footer className="footer-alt">
-        <p><a href="#">Contato</a></p>
-        <p><a href="#">Sobre nós</a></p>
-        <p><a href="#">Termos e condições</a></p>
+        <p>Contato</p>
+        <p>Sobre nós</p>
+        <p>Termos e condições</p>
     </footer>
     </>
     );

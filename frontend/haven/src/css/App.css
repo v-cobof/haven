@@ -39,11 +39,25 @@ header span {
   padding: 1rem;
 }
 
-footer p a {
+footer p {
   font-size: medium;
 }
 
-footer a {
+footer p {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+.footer p {
+  font-size: medium;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+.footer-alt p {
+  font-size: medium;
   color: #fff;
   text-decoration: none;
   padding-left: 1rem;

@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { useLoadScript } from "@react-google-maps/api"
-import PresentationContent from '../components/PresentationContent';
-import InputMask from 'react-input-mask';
 import Footer from '../components/Footer';
 import Places from "../components/Places";
 
 export default function RegisterUser() {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPass, setConfirmPass] = useState('');
-    const [name, setName] = useState('');
     const [location, setLocation] = useState('');
 
     const [crime, setCrime] = useState('');
@@ -27,9 +21,8 @@ export default function RegisterUser() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        const user = {email, password};
-        console.log(user)
+        console.log(location)
+        console.log(crime)
     }
 
     function handleCrime(content){

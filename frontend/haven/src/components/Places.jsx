@@ -11,7 +11,6 @@ import {
     ComboboxOption
 } from "@reach/combobox";
 import "@reach/combobox/styles.css"
-import { CEP_URL } from "../utils/requests";
 
 export default function Places(prop) {
     const { 

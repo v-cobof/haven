@@ -1,10 +1,7 @@
-import {useState, useMemo, useCallback, useRef} from "react";
+import {useState, useMemo} from "react";
 import {
     GoogleMap,
-    Marker,
-    DirectionsRenderer,
     Circle,
-    MarkerClusterer,
 } from "@react-google-maps/api";
 import Places from "./Places";
 
@@ -12,7 +9,6 @@ import Places from "./Places";
 export default function Map(prop) {
 
     const [zoom, setZoom] = useState(9)
-    const mapRef = useRef();
     const [center, setCenter] = useState({lat: -23.36, lng: -46.84})
 
 
@@ -34,8 +30,6 @@ export default function Map(prop) {
       }),
       []
     );
-
-    const onLoad = useCallback((map) => (mapRef.current = map), []);
 
     return (
         <>

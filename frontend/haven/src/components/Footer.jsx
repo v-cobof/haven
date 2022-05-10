@@ -2,9 +2,9 @@ const Footer = () => {
 
   return (
       <footer className="footer">
-        <p><a href="#">Contato</a></p>
-        <p><a href="#">Sobre nós</a></p>
-        <p><a href="#">Termos e condições</a></p>
+        <p>Contato</p>
+        <p>Sobre nós</p>
+        <p>Termos e condições</p>
       </footer>
   );
 }

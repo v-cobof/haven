@@ -4,7 +4,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import PresentationContent from '../components/PresentationContent';
-import Places from "../components/Places";
 export default function Home() {
 
   return (
